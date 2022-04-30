@@ -7,39 +7,38 @@ body {
     background-color: black;
 }
 
-nav {
-    position: relative;
-    width:auto;
-}
-
 ul {
-    position: relative;
-    list-style-type: none;
-    display: inline-block;
-    left: 18%;
-    
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    left: 19%;
+    top: 3%;
 }
 
 li {
-    float:left;
+    list-style-type: none;
+}
+
+li:last-child {
+    margin-left: 350px;
 }
 
 .navbar {
     color: white;
     text-decoration: none;
-    font: 600 13px 'Heebo', Arial,Verdana,sans-serif;
-    display: block;
-    margin-left: 20px;
-    margin-top: 30px;
+    font: 600 13px 'Heebo', Arial,Verdana,sans-serif; 
+    margin-right: 25px;
+    background-image: linear-gradient(white, white);
+    background-size: 0 0.1em;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    transition: background-size .2s ease-in-out;
 }
 
-.navbarlast {
-    color: white;
-    text-decoration: none;
-    font: 600 13px 'Heebo', Arial,Verdana,sans-serif;
-    display: block;
-    margin-left: 370px;
-    margin-top: 30px;
+.navbar:hover {
+    background-size: 100% 0.1em;
+    background-position-x: 0;
 }
 
 .pic1 {
