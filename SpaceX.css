@@ -175,7 +175,7 @@ body {
     display: flex;                             /* make three lines stack vertically */
     justify-content: space-between;
     flex-direction: column;
-    top: 50px;
+    top: 51px;
     right: 50px;
     z-index: 2;
     background-image: radial-gradient(circle at 10% 10%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
