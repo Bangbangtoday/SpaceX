@@ -8,7 +8,7 @@
 }
 
 @keyframes wordload {
-    from {transform: translateY(80px); visibility: hidden;}
+    from {transform: translateY(100px); visibility: hidden;}
     to {transform: translateY(0px); visibility: visible;}
 }
 
