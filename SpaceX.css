@@ -13,7 +13,7 @@ body {
     background-color: transparent;
     width: 100%;
     height: 15%;
-    z-index: 1;
+    z-index:1;
 }
 
 #toplist{
@@ -68,7 +68,7 @@ position: fixed;
 }
 
 .pic1 {
-    background: url(https://www.spacex.com/static/images/backgrounds-2022/crew-4/post-launch/Homepage_Desktop.webp);
+    background-image: url(https://www.spacex.com/static/images/backgrounds-2022/crew-4/post-launch/Homepage_Desktop.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -147,10 +147,11 @@ position: fixed;
     display: flex;                             /* make three lines stack vertically */
     justify-content: space-evenly;
     flex-direction: column;
+    z-index: 2;
 }
 
 #ham div {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.848);;
     height: 2px;
     transition: .3s;
 }
@@ -171,26 +172,85 @@ position: fixed;
 
 /* Hamburger Menu Icon */
 
+#hamburger:checked ~ #sidelist{
+    right: 0%;
+}
+
+#hamburger:checked ~ #sidelist li{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#hamburger:checked ~ #shade{
+    visibility: visible;
+    opacity: 1;
+}
+
 #sidenav {
-    position: fixed;
-    width: 100%;
+    position: absolute;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
+}
+
+#shade {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
     background-image: radial-gradient(circle at 10% 10%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 }
 
 #sidelist {
+    position: fixed;
+    margin: 0;
+    right: -20%;
     list-style-type: none;
-    flex-direction: column;
     background-color: black;
     height: 100%;
     width: 20%;
-    align-items: flex-end;
     text-align: right;
+    transition: .5s;
+}
+
+#sidelist li {
+    position: relative;
+    left: -16%;
+    width: 240px;
+    top: 13%;
+    opacity: 0;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.3);
+    padding: 10px 0;
+    transform: translateY(-10px);
+    transition-duration: .5s;
+    transition-delay: .2s;
+}
+
+#sidelist li:nth-child(2) {
+    transition-delay: .25s;
+}
+
+#sidelist li:nth-child(3) {
+    transition-delay: .3s;
+}
+
+#sidelist li:nth-child(4) {
+    transition-delay: .35s;
+}
+
+#sidelist li:nth-child(5) {
+    transition-delay: .4s;
 }
 
 #sidelist li a {
-    color: white;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.848);
+    font: 200 15px 'Heebo', Arial,Verdana,sans-serif;
     text-decoration: none;
-    padding: 40px;
+}
+
+
+#sidelist li a:hover {
+    color: rgb(111, 111, 111);
 }
