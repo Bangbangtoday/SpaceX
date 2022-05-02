@@ -2,9 +2,20 @@
     box-sizing: border-box;
 }
 
+@keyframes load {                                /* page loads fade in */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes wordload {
+    from {transform: translateY(80px); visibility: hidden;}
+    to {transform: translateY(0px); visibility: visible;}
+}
+
 body {
     margin: 0;
     background-color: black;
+    animation: load 1s ease-in;
 }
 
 #topnav {
@@ -16,18 +27,23 @@ body {
     z-index:1;
 }
 
-#toplist{
+#toplist {
     display: flex;
     left: 280px;
     top: 27px;
     position: inherit;
     list-style-type: none;
-    align-items: flex-end;
+    transform: none;
 }
 
+@media screen and (max-width: 1120px) {
+    #toplist {left: 250px;}
+}
+
+
 #toplist li:nth-child(8) {
-right: 70px;
-position: fixed;
+    right: 70px;
+    position: fixed;
 }
 
 /* a line start from left, end at right */
@@ -35,7 +51,7 @@ position: fixed;
 .navbar {                                                              
     color: white;
     text-decoration: none;
-    font: 600 13px 'Heebo', Arial,Verdana,sans-serif; 
+    font: 600 11px 'Heebo', Arial,Verdana,sans-serif; 
     margin-right: 27px;
     background-image: linear-gradient(white, white);
     background-size: 0 0.1em;                                      /* make a horizontal line, invisible as the x-axis is 0 */
@@ -43,6 +59,10 @@ position: fixed;
     background-position-x: 100%;                                   /* set the invisible line at the right  */
     background-position-y: 100%;
     transition: background-size .3s ease-out;
+}
+
+@media screen and (max-width: 1120px) {
+    .navbar {margin-right: 15px;}
 }
 
 .navbar:hover {
@@ -66,6 +86,10 @@ position: fixed;
     z-index: -1;
 }
 
+@media screen and (max-width: 1120px) {
+    #logo {left: -20px;}
+}
+
 .pic1 {
     background-image: url(https://www.spacex.com/static/images/backgrounds-2022/crew-4/post-launch/Homepage_Desktop.webp);
     background-size: cover;
@@ -80,18 +104,23 @@ position: fixed;
     position: absolute;
     left: 70px;
     top: 400px;
-    
+}
+
+@media screen and (max-width: 1120px) {
+    .pic1position {left: 50px;}
 }
 
 .smallword {
     color: white;
     font: 200 18px/10px 'Heebo', Arial,Verdana,sans-serif;
+    animation: wordload .5s;
 }
 
 .bigword {
     color: white;
     font: 600 42px/10px 'Heebo', Arial,Verdana,sans-serif;
     text-shadow: 0 0 2px black;
+    animation: wordload .5s .1s;
 }
 
 .container {
@@ -100,6 +129,7 @@ position: fixed;
    height: 55px;
    margin-top: 50px;
    overflow: hidden;
+   animation: wordload .5s .2s;
 }
 
 .rewatch1 {
