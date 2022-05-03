@@ -12,9 +12,13 @@
     to {transform: translateY(0px); visibility: visible;}
 }
 
+::selection {
+    background-color: white;
+    color: black;
+}
+
 body {
     margin: 0;
-    background-color: black;
     animation: load 1s ease-in;
 }
 
@@ -51,7 +55,7 @@ body {
 .navbar {                                                              
     color: white;
     text-decoration: none;
-    font: 600 11px 'Heebo', Arial,Verdana,sans-serif; 
+    font: 600 13px 'Heebo', Arial,Verdana,sans-serif; 
     margin-right: 27px;
     background-image: linear-gradient(white, white);
     background-size: 0 0.1em;                                      /* make a horizontal line, invisible as the x-axis is 0 */
@@ -75,32 +79,72 @@ body {
 /* transition start position diifferent from end position */
 
 #logo {
-    width: 330px;
-    height: 60px;
-    background-image: url("https://www.spacex.com/static/images/share.jpg");
+    width: 230px;
+    height: 74px;
+    background-image: url("https://spacex-microsite.netlify.app/images/spacex-logo-big.png");
     background-size: cover;
     background-position: center;
-    left: 0;
-    top: 20px;
+    left: 70px;
+    top: -4px;
     position: inherit;
     z-index: -1;
-}
-
-@media screen and (max-width: 1120px) {
-    #logo {left: -20px;}
 }
 
 .pic1 {
     background-image: url(https://www.spacex.com/static/images/backgrounds-2022/crew-4/post-launch/Homepage_Desktop.webp);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;                       /* still show the image center for smaller screen size  */
     width: 100%;
-    height: 678px;
+    height: 100%;
     position: absolute;
-    overflow: hidden;
 }
 
-.pic1position {
+.pic2 {
+    background-image: url(https://www.spacex.com/static/images/backgrounds-2022/ax-1/splashdown/Homepage_Axiom_1_Splashdown_20220425_DSC07376_Desktop.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;                       /* still show the image center for smaller screen size  */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+}
+
+.pic3 {
+    background-image: url(https://www.spacex.com/static/images/backgrounds-2022/sl4-16/post-launch/Homepage_Desktop.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;                       /* still show the image center for smaller screen size  */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 200%;
+}
+
+.pic4 {
+    background-image: url(https://www.spacex.com/static/images/backgrounds-2022/starship-update/S20_Chopstick_Stack_Desktop.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;                       /* still show the image center for smaller screen size  */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 300%;
+}
+
+.pic5 {
+    background-image: url(https://www.spacex.com/static/images/backgrounds-2021/hls-resized-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;                       /* still show the image center for smaller screen size  */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 400%;
+}
+
+.picposition {
     position: absolute;
     left: 70px;
     top: 400px;
@@ -112,22 +156,25 @@ body {
 
 .smallword {
     color: white;
-    font: 200 18px/10px 'Heebo', Arial,Verdana,sans-serif;
+    font: 200 18px 'Heebo', Arial,Verdana,sans-serif;
     animation: wordload .5s;
 }
 
 .bigword {
     color: white;
-    font: 600 42px/10px 'Heebo', Arial,Verdana,sans-serif;
+    font: 600 42px/40px Arial,Verdana,sans-serif;
     text-shadow: 0 0 2px black;
     animation: wordload .5s .1s;
+    width: 500px;
+    height: auto;
+    margin-top: -15px;
 }
 
 .container {
    position: relative;
-   width: 47%;
+   width: 150px;
    height: 55px;
-   margin-top: 50px;
+   margin-top: 30px;
    overflow: hidden;
    animation: wordload .5s .2s;
 }
@@ -137,7 +184,7 @@ body {
     color: white;
     text-decoration: none;
     border: 2px solid white;
-    width: 100%;
+    width: 150px;
     height: 100%; 
     background-image: linear-gradient(white, white);
     background-size: 100% 0;
@@ -149,6 +196,7 @@ body {
 .rewatch1 span {
     font: 600 13px 'Heebo', Arial,Verdana,sans-serif;
     display: inline-block;
+    white-space: nowrap;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -175,14 +223,13 @@ body {
     display: flex;                             /* make three lines stack vertically */
     justify-content: space-between;
     flex-direction: column;
-    top: 51px;
+    top: 48px;
     right: 50px;
     z-index: 2;
-    background-image: radial-gradient(circle at 10% 10%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
 }
 
 #ham div {
-    background-color: rgba(255, 255, 255, 0.848);;
+    background-color: rgba(255, 255, 255, 0.848);
     height: 2px;
     width: 17px;
     transition: .3s;
@@ -226,7 +273,7 @@ body {
 
 #shade {
     position: fixed;
-    width: 80%;
+    width: 100%;
     height: 100%;
     transition: .5s;
     visibility: hidden;
@@ -238,11 +285,11 @@ body {
 #sidelist {
     position: fixed;
     margin: 0;
-    right: -300px;
+    right: -340px;
     list-style-type: none;
     background-color: black;
     height: 100%;
-    width: 300px;
+    width: 340px;
     text-align: right;
     transition: .5s;
     overflow: hidden;
@@ -250,7 +297,7 @@ body {
 
 #sidelist li {
     position: relative;
-    right: 36px;
+    right: -5px;
     width: 240px;
     top: 80px;
     opacity: 0;
@@ -289,4 +336,36 @@ body {
 
 #sidelist li:hover a{
     color: rgb(111, 111, 111);
+}
+
+footer {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    top: 500%;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    align-items: center;
+}
+
+footer #spacex {
+    color: grey;
+    font: 400 11px 'Heebo', Arial,Verdana,sans-serif; 
+}
+
+footer p a {
+    color: white;
+    font: 600 11px 'Heebo', Arial,Verdana,sans-serif; 
+    text-decoration: none;
+    transition: .5s;
+}
+
+footer p a:hover {
+    color: grey;
+}
+
+.smallscreen {
+    display: none;
 }
