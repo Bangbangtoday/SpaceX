@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link media="screen and (min-width: 960px)" rel="stylesheet" href="SpaceX.css">
+    <link media="screen and (max-width: 960px)" rel="stylesheet" href="SpaceX-smallscreen.css">
     <title>SpaceX</title>
     <link rel="shortcut icon" href="https://jgd625.github.io/SpaceXAPI/images/Xlogo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@00;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav id="topnav">
+    <div id="logo"><a style="height: 60px; display: block;" href="SpaceX.html"></a></div>                  <!--  Set <a> with height and display block for the link to work -->
     <ul id="toplist">
-    <li id="logo"><a style="height: 60px; display: block;" href="SpaceX.html"></a></li>                  <!--  Set <a> with height and display block for the link to work -->
     <li><a class="navbar" href="https://www.spacex.com/vehicles/falcon-9/">FALCON 9</a></li>
     <li><a class="navbar" href="https://www.spacex.com/vehicles/falcon-heavy/">FALCON HEAVY</a></li>
     <li><a class="navbar" href="https://www.spacex.com/vehicles/dragon/">DRAGON</a></li>
@@ -26,9 +27,32 @@
     </ul>
 </nav>
 
+<nav id="sidenav">
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger" id="ham">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+    <ul id="sidelist">
+        <li class="smallscreen"><a href="https://www.spacex.com/vehicles/falcon-9/">FALCON 9</a></li>
+        <li class="smallscreen"><a href="https://www.spacex.com/vehicles/falcon-heavy/">FALCON HEAVY</a></li>
+        <li class="smallscreen"><a href="https://www.spacex.com/vehicles/dragon/">DRAGON</a></li>
+        <li class="smallscreen"><a href="https://www.spacex.com/vehicles/starship/">STARSHIP</a></li>
+        <li class="smallscreen"><a href="https://www.spacex.com/human-spaceflight/">HUMAN SPACEFLIGHT</a></li>
+        <li class="smallscreen"><a href="https://www.spacex.com/rideshare/">RIDESHARE</a></li>
+        <li class="smallscreen"><a href="https://shop.spacex.com/">SHOP</a></li>
+        <li><a href="https://www.spacex.com/mission/">MISSION</a></li>
+        <li><a href="https://www.spacex.com/launches/">LAUNCHES</a></li>
+        <li><a href="https://www.spacex.com/careers/">CAREERS</a></li>
+        <li><a href="https://www.spacex.com/updates/">UPDATES</a></li>
+        <li><a href="https://shop.spacex.com/">SHOP</a></li>
+    </ul>
+    <label for="hamburger" id="shade"></label>                                 <!-- shade acts like the icon, can make the side navbar leave-->
+</nav>
 
 <div class="pic1">
-    <div class="pic1position">
+    <div class="picposition">
         <h4 class="smallword">CURRRENT MISSION</h4>
         <h1 class="bigword">CREW-4 MISSION</h1>
         <div class="container">
@@ -36,25 +60,54 @@
         </div>
     </div>
 </div>
-</div>
+
+<div class="pic2">
+    <div class="picposition">
+        <h4 class="smallword">COMPLETED MISSION</h4>
+        <h1 class="bigword">AX-1 MISSION</h1>
+        <div class="container">
+            <a class="rewatch1" href="https://www.spacex.com/launches/ax-1/"><span>REWATCH</span></a>
+        </div>
+    </div>
 </div>
 
-<nav id="sidenav">
-<input type="checkbox" id="hamburger">
-        <label for="hamburger" id="ham">
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
-        <ul id="sidelist"> 
-            <li><a href="https://www.spacex.com/mission/">MISSION</a></li>
-            <li><a href="https://www.spacex.com/launches/">LAUNCHES</a></li>
-            <li><a href="https://www.spacex.com/careers/">CAREERS</a></li>
-            <li><a href="https://www.spacex.com/updates/">UPDATES</a></li>
-            <li><a href="https://shop.spacex.com/">SHOP</a></li>
-        </ul>
-        <label for="hamburger" id="shade"></label>                                 <!-- shade acts like the icon, can make the side navbar leave-->
-</nav>
+<div class="pic3">
+    <div class="picposition">
+        <h4 class="smallword">RECENT LAUNCH</h4>
+        <h1 class="bigword">STARLINK MISSION</h1>
+        <div class="container">
+            <a class="rewatch1" href="https://www.spacex.com/launches/sl4-16/"><span>REWATCH</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="pic4">
+    <div class="picposition">
+        <h1 class="bigword">STARSHIP UPDATE</h1>
+        <div class="container">
+            <a class="rewatch1" href="https://www.spacex.com/updates/#starship-update"><span>LEARN MORE</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="pic5">
+    <div class="picposition">
+        <h1 class="bigword">STARSHIP TO LAND NASA ASTRONAUTS ON THE MOON</h1>
+        <div class="container">
+            <a class="rewatch1" href="https://www.spacex.com/updates/#starship-moon-announcement"><span>LEARN MORE</span></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p id="spacex">SPACEX © 2022</p>
+    <p><a href="https://twitter.com/spacex" target="_blank">TWITTER</a></p>
+    <p><a href="https://www.youtube.com/spacex" target="_blank">YOUTUBE</a></p>
+    <p><a href="https://www.instagram.com/spacex/" target="_blank">INSTAGRAM</a></p>
+    <p><a href="https://www.flickr.com/photos/spacex" target="_blank">FLICKR</a></p>
+    <p><a href="https://www.linkedin.com/company/spacex" target="_blank">LINKEDIN</a></p>
+    <p><a href="https://www.spacex.com/media/privacy_policy_spacex.pdf" target="_blank">PRIVACY POLICY</a></p>
+</footer>
 
 </body>
 </html>
